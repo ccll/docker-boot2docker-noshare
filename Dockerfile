@@ -7,3 +7,7 @@ RUN rm $ROOTFS/etc/rc.d/automount-shares && \
   sed -i -r '/# Automount Shared Folders \(VirtualBox, etc\.\)/d' $ROOTFS/opt/bootscript.sh $ROOTFS/opt/bootscript.sh && \
   sed -i -r '/\/etc\/rc.d\/automount-shares/d' $ROOTFS/opt/bootscript.sh $ROOTFS/opt/bootscript.sh
 
+#Start the iso maker script
+RUN /make_iso.sh
+
+CMD ["cat", "boot2docker.iso"]
