@@ -1,4 +1,4 @@
-FROM quay.io/ccll/boot2docker:1.6.2
+FROM boot2docker/boot2docker
 
 # Remove the vboxfs automount
 RUN rm $ROOTFS/etc/rc.d/automount-shares && \
